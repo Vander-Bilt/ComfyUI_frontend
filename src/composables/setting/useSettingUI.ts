@@ -142,6 +142,7 @@ export function useSettingUI(
   const panels = computed<SettingPanelItem[]>(() =>
     [
       aboutPanel,
+      donatePanel,
       creditsPanel,
       userPanel,
       keybindingPanel,
@@ -195,6 +196,7 @@ export function useSettingUI(
         keybindingPanel.node,
         extensionPanel.node,
         aboutPanel.node,
+        donatePanel.node,
         ...(isElectron() ? [serverConfigPanel.node] : [])
       ].map(translateCategory)
     }
