@@ -8,11 +8,11 @@
     <div class="flex gap-4">
       <div>
         <h3 class="text-lg font-semibold mb-2">Alipay</h3>
-        <img src="/assets/alipay.png" alt="Alipay QR Code" class="w-32 h-32">
+        
       </div>
       <div>
         <h3 class="text-lg font-semibold mb-2">WeChat Pay</h3>
-        <img src="/assets/wechatpay.png" alt="WeChat Pay QR Code" class="w-32 h-32">
+        
       </div>
     </div>
   </PanelTemplate>
