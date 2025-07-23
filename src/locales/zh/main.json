@@ -251,6 +251,8 @@
     "promptExecutionError": "提示执行失败"
   },
   "g": {
+    "donate": "捐赠",
+    "donateMessage": "如果你觉得有所帮助，欢迎支持我们配置更多的GPU资源，从而做得更好。",
     "about": "关于",
     "add": "添加",
     "addNodeFilterCondition": "添加节点筛选条件",

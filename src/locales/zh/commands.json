@@ -134,6 +134,9 @@
   "Comfy_Help_AboutComfyUI": {
     "label": "打开关于ComfyUI"
   },
+  "Comfy_Help_Donate": {
+    "label": "捐赠"
+  },
   "Comfy_Help_OpenComfyOrgDiscord": {
     "label": "打开Comfy-Org Discord"
   },

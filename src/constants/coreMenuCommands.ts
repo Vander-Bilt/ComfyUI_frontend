@@ -25,6 +25,6 @@ export const CORE_MENU_COMMANDS = [
   ],
   [
     ['Help'],
-    ['Comfy.Help.AboutComfyUI', 'Comfy.Feedback', 'Comfy.ContactSupport']
+    ['Comfy.Help.AboutComfyUI', 'Comfy.Help.Donate', 'Comfy.Feedback', 'Comfy.ContactSupport']
   ]
 ]

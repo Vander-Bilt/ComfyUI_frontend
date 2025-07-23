@@ -11,5 +11,6 @@ function formatAndEslint(fileNames) {
   return [
     `eslint --fix ${fileNames.join(' ')}`,
     `prettier --write ${fileNames.join(' ')}`
+    `git add ${fileNames.join(' ')}`
   ]
 }

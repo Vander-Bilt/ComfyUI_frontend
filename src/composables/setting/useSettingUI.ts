@@ -23,6 +23,7 @@ interface SettingPanelItem {
 export function useSettingUI(
   defaultPanel?:
     | 'about'
+    | 'donate'
     | 'keybinding'
     | 'extension'
     | 'server-config'
@@ -69,6 +70,17 @@ export function useSettingUI(
     },
     component: defineAsyncComponent(
       () => import('@/components/dialog/content/setting/AboutPanel.vue')
+    )
+  }
+
+  const donatePanel: SettingPanelItem = {
+    node: {
+      key: 'donate',
+      label: 'Donate',
+      children: []
+    },
+    component: defineAsyncComponent(
+      () => import('@/components/dialog/content/setting/DonatePanel.vue')
     )
   }
 

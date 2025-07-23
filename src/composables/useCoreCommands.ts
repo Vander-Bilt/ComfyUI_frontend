@@ -589,6 +589,16 @@ export function useCoreCommands(): ComfyCommand[] {
       }
     },
     {
+      id: 'Comfy.Help.Donate',
+      icon: 'pi pi-heart',
+      label: 'Support Us',
+      menubarLabel: 'Donate',
+      versionAdded: '1.0.0',
+      function: () => {
+        dialogService.showSettingsDialog('donate')
+      }
+    },
+    {
       id: 'Comfy.DuplicateWorkflow',
       icon: 'pi pi-clone',
       label: 'Duplicate Current Workflow',

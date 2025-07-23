@@ -59,6 +59,7 @@ export const useDialogService = () => {
       | 'server-config'
       | 'user'
       | 'credits'
+      | 'donate'
   ) {
     const props = panel ? { props: { defaultPanel: panel } } : undefined
 
@@ -77,6 +78,17 @@ export const useDialogService = () => {
       component: SettingDialogContent,
       props: {
         defaultPanel: 'about'
+      }
+    })
+  }
+
+  function showDonateDialog() {
+    dialogStore.showDialog({
+      key: 'global-settings',
+      headerComponent: SettingDialogHeader,
+      component: SettingDialogContent,
+      props: {
+        defaultPanel: 'donate'
       }
     })
   }
@@ -429,6 +441,7 @@ export const useDialogService = () => {
     showMissingModelsWarning,
     showSettingsDialog,
     showAboutDialog,
+    showDonateDialog,
     showExecutionErrorDialog,
     showTemplateWorkflowsDialog,
     showIssueReportDialog,
