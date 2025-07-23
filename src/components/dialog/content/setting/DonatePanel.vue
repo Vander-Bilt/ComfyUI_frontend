@@ -3,7 +3,8 @@
     <h2 class="text-2xl font-bold mb-2">
       {{ $t('g.donate') }}
     </h2>
-    <p class="mb-4">{{ $t('g.donateMessage') }}</p>
+    <p class="mb-4">{{ $t('g.donateMessage1') }}</p>
+    <p class="mb-4">{{ $t('g.donateMessage2') }}</p>
 
     <div class="flex gap-4">
       <div>

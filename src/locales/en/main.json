@@ -135,7 +135,8 @@
     "progressCountOf": "of",
     "keybindingAlreadyExists": "Keybinding already exists on",
     "donate": "Donate",
-    "donateMessage": "If you find this helpful, your support in configuring more GPU resources would be greatly appreciated, enabling us to further improve."
+    "donateMessage1": "This project provides you with cutting-edge, free AI generation tools. The core code and all original content are copyrighted by their respective authors. We built this platform to offer powerful GPU resources, enabling more people to experience and benefit from the magic of AI technology.",
+    "donateMessage2": "If you find this project helpful, please consider supporting us! Your donations directly fund the configuration of more powerful GPU resources, ensuring the project's continuous stable operation and allowing us to constantly enhance our services to bring you an even better AI experience."
   },
   "manager": {
     "title": "Custom Nodes Manager",
@@ -961,6 +962,7 @@
     "Manage group nodes": "Manage group nodes",
     "Ungroup selected group nodes": "Ungroup selected group nodes",
     "About ComfyUI": "About ComfyUI",
+    "Donate": "Donate",
     "Comfy-Org Discord": "Comfy-Org Discord",
     "ComfyUI Docs": "ComfyUI Docs",
     "ComfyUI Forum": "ComfyUI Forum",

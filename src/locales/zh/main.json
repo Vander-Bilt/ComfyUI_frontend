@@ -252,7 +252,8 @@
   },
   "g": {
     "donate": "捐赠",
-    "donateMessage": "如果你觉得有所帮助，欢迎支持我们配置更多的GPU资源，从而做得更好。",
+    "donateMessage1": "本项目致力于为您提供前沿、免费的AI生成工具。核心代码和所有原创内容版权归原作者所有。我们搭建这个平台，旨在通过提供强大的GPU资源，让更多人能体验并受益于AI技术的魅力。",
+    "donateMessage2": "如果您觉得本项目有所帮助，欢迎支持我们！您的捐赠将直接用于配置更多、更强大的GPU资源，确保项目持续稳定运行，并不断提升服务能力，为您带来更优质的AI体验。",
     "about": "关于",
     "add": "添加",
     "addNodeFilterCondition": "添加节点筛选条件",
@@ -718,6 +719,7 @@
   },
   "menuLabels": {
     "About ComfyUI": "关于ComfyUI",
+    "Donate": "捐赠",
     "Add Edit Model Step": "添加编辑模型步骤",
     "Browse Templates": "浏览模板",
     "Bypass/Unbypass Selected Nodes": "忽略/取消忽略选定节点",
