@@ -19,7 +19,6 @@
     "test:browser": "npx playwright test",
     "test:unit": "vitest run tests-ui/tests",
     "test:component": "vitest run src/components/",
-    "prepare": "husky || true",
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
