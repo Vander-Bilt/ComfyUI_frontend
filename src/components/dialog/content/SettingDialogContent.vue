@@ -86,7 +86,7 @@ const { defaultPanel } = defineProps<{
     | 'keybinding'
     | 'extension'
     | 'server-config'
-    | 'user'
+    // | 'user'
     | 'credits'
 }>()
 

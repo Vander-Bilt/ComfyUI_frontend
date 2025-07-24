@@ -13,7 +13,7 @@ import { isElectron } from '@/utils/envUtil'
 import { normalizeI18nKey } from '@/utils/formatUtil'
 import { buildTree } from '@/utils/treeUtil'
 
-import { useCurrentUser } from '../auth/useCurrentUser'
+// import { useCurrentUser } from '../auth/useCurrentUser'
 
 interface SettingPanelItem {
   node: SettingTreeNode
