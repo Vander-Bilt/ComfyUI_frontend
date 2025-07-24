@@ -14,17 +14,18 @@ export const CORE_MENU_COMMANDS = [
   [['Edit'], ['Comfy.RefreshNodeDefinitions']],
   [['Edit'], ['Comfy.ClearWorkflow']],
   [['Edit'], ['Comfy.OpenClipspace']],
+  // [
+  //   ['Help'],
+  //   [
+  //     'Comfy.Help.OpenComfyUIIssues',
+  //     'Comfy.Help.OpenComfyUIDocs',
+  //     'Comfy.Help.OpenComfyOrgDiscord',
+  //     'Comfy.Help.OpenComfyUIForum'
+  //   ]
+  // ],
   [
     ['Help'],
-    [
-      'Comfy.Help.OpenComfyUIIssues',
-      'Comfy.Help.OpenComfyUIDocs',
-      'Comfy.Help.OpenComfyOrgDiscord',
-      'Comfy.Help.OpenComfyUIForum'
-    ]
-  ],
-  [
-    ['Help'],
-    ['Comfy.Help.AboutComfyUI', 'Comfy.Help.Donate', 'Comfy.Feedback', 'Comfy.ContactSupport']
+    // ['Comfy.Help.AboutComfyUI', 'Comfy.Help.Donate', 'Comfy.Feedback', 'Comfy.ContactSupport']
+    ['Comfy.Help.AboutComfyUI', 'Comfy.Help.Donate']
   ]
 ]

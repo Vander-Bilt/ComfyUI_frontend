@@ -27,11 +27,11 @@ export function useSettingUI(
     | 'keybinding'
     | 'extension'
     | 'server-config'
-    | 'user'
+    // | 'user'
     | 'credits'
 ) {
   const { t } = useI18n()
-  const { isLoggedIn } = useCurrentUser()
+  // const { isLoggedIn } = useCurrentUser()
   const settingStore = useSettingStore()
   const activeCategory = ref<SettingTreeNode | null>(null)
 
@@ -95,16 +95,16 @@ export function useSettingUI(
     )
   }
 
-  const userPanel: SettingPanelItem = {
-    node: {
-      key: 'user',
-      label: 'User',
-      children: []
-    },
-    component: defineAsyncComponent(
-      () => import('@/components/dialog/content/setting/UserPanel.vue')
-    )
-  }
+  // const userPanel: SettingPanelItem = {
+  //   node: {
+  //     key: 'user',
+  //     label: 'User',
+  //     children: []
+  //   },
+  //   component: defineAsyncComponent(
+  //     () => import('@/components/dialog/content/setting/UserPanel.vue')
+  //   )
+  // }
 
   const keybindingPanel: SettingPanelItem = {
     node: {
@@ -144,7 +144,7 @@ export function useSettingUI(
       aboutPanel,
       donatePanel,
       creditsPanel,
-      userPanel,
+      // userPanel,
       keybindingPanel,
       extensionPanel,
       ...(isElectron() ? [serverConfigPanel] : [])
@@ -174,14 +174,14 @@ export function useSettingUI(
 
   const groupedMenuTreeNodes = computed<SettingTreeNode[]>(() => [
     // Account settings - only show credits when user is authenticated
-    {
-      key: 'account',
-      label: 'Account',
-      children: [
-        userPanel.node,
-        ...(isLoggedIn.value ? [creditsPanel.node] : [])
-      ].map(translateCategory)
-    },
+    // {
+    //   key: 'account',
+    //   label: 'Account',
+    //   children: [
+    //     userPanel.node,
+    //     ...(isLoggedIn.value ? [creditsPanel.node] : [])
+    //   ].map(translateCategory)
+    // },
     // Normal settings stored in the settingStore
     {
       key: 'settings',
