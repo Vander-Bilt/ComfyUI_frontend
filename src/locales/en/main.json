@@ -135,8 +135,8 @@
     "progressCountOf": "of",
     "keybindingAlreadyExists": "Keybinding already exists on",
     "donate": "Donate",
-    "donateMessage1": "This project provides you with cutting-edge, free AI generation tools. The core code and all original content are copyrighted by their respective authors. We built this platform to offer powerful GPU resources, enabling more people to experience and benefit from the magic of AI technology.",
-    "donateMessage2": "If you find this project helpful, please consider supporting us! Your donations directly fund the configuration of more powerful GPU resources, ensuring the project's continuous stable operation and allowing us to constantly enhance our services to bring you an even better AI experience."
+    "donateMessage1": "If you're happy with our software, we'd greatly appreciate your support! ",
+    "donateMessage2": "Our goal is to expand our GPU resources to deliver increased computing power. Your generosity, no matter the size, is a powerful catalyst for our progress, allowing us to push boundaries and offer the best possible service."
   },
   "manager": {
     "title": "Custom Nodes Manager",

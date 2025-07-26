@@ -1,5 +1,11 @@
 <div align="center">
 
+# git提交（忽略编译预检问题）
+git add .
+git commit -m "51la & DonatePanel" -n
+git push --force
+
+
 # ComfyUI_frontend
 
 **Official front-end implementation of [ComfyUI](https://github.com/comfyanonymous/ComfyUI).**
