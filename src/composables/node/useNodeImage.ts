@@ -9,7 +9,7 @@ const VIDEO_DEFAULT_OPTIONS = {
   controls: true,
   loop: true
 } as const
-const MEDIA_LOAD_TIMEOUT = 120000
+const MEDIA_LOAD_TIMEOUT = 300000
 const MAX_RETRIES = 1
 const DEFAULT_VIDEO_SIZE = 256
 
