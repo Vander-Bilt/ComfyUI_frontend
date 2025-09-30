@@ -37,8 +37,8 @@ import { computed } from 'vue'
 import ExtensionSlot from '@/components/common/ExtensionSlot.vue'
 import SidebarBottomPanelToggleButton from '@/components/sidebar/SidebarBottomPanelToggleButton.vue'
 import SidebarShortcutsToggleButton from '@/components/sidebar/SidebarShortcutsToggleButton.vue'
+import { useSettingStore } from '@/platform/settings/settingStore'
 import { useKeybindingStore } from '@/stores/keybindingStore'
-import { useSettingStore } from '@/stores/settingStore'
 import { useUserStore } from '@/stores/userStore'
 import { useWorkspaceStore } from '@/stores/workspaceStore'
 import type { SidebarTabExtension } from '@/types/extensionTypes'
@@ -76,6 +76,22 @@ const getTabTooltipSuffix = (tab: SidebarTabExtension) => {
 }
 </script>
 
+<style>
+/* Global CSS variables for sidebar
+ * These variables need to be global (not scoped) because they are used by
+ * teleported components like WhatsNewPopup that render outside the sidebar
+ * but need to reference sidebar dimensions for proper positioning.
+ */
+:root {
+  --sidebar-width: 4rem;
+  --sidebar-icon-size: 1rem;
+}
+
+:root:has(.side-tool-bar-container.small-sidebar) {
+  --sidebar-width: 2.5rem;
+}
+</style>
+
 <style scoped>
 .side-tool-bar-container {
   display: flex;
@@ -88,9 +104,6 @@ const getTabTooltipSuffix = (tab: SidebarTabExtension) => {
   background-color: var(--comfy-menu-secondary-bg);
   color: var(--fg-color);
   box-shadow: var(--bar-shadow);
-
-  --sidebar-width: 4rem;
-  --sidebar-icon-size: 1rem;
 }
 
 .side-tool-bar-container.small-sidebar {

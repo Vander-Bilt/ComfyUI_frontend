@@ -8,6 +8,7 @@ import {
   type UserCredential,
   browserLocalPersistence,
   createUserWithEmailAndPassword,
+  deleteUser,
   onAuthStateChanged,
   sendPasswordResetEmail,
   setPersistence,
@@ -24,8 +25,8 @@ import { COMFY_API_BASE_URL } from '@/config/comfyApi'
 import { t } from '@/i18n'
 import { useDialogService } from '@/services/dialogService'
 import { useApiKeyAuthStore } from '@/stores/apiKeyAuthStore'
-import { type AuthHeader } from '@/types/authTypes'
-import { operations } from '@/types/comfyRegistryTypes'
+import type { AuthHeader } from '@/types/authTypes'
+import type { operations } from '@/types/comfyRegistryTypes'
 
 type CreditPurchaseResponse =
   operations['InitiateCreditPurchase']['responses']['201']['content']['application/json']
@@ -40,7 +41,7 @@ type AccessBillingPortalResponse =
 type AccessBillingPortalReqBody =
   operations['AccessBillingPortal']['requestBody']
 
-export class FirebaseAuthStoreError extends Error {
+class FirebaseAuthStoreError extends Error {
   constructor(message: string) {
     super(message)
     this.name = 'FirebaseAuthStoreError'
@@ -61,10 +62,12 @@ export const useFirebaseAuthStore = defineStore('firebaseAuth', () => {
 
   // Providers
   const googleProvider = new GoogleAuthProvider()
+  googleProvider.addScope('email')
   googleProvider.setCustomParameters({
     prompt: 'select_account'
   })
   const githubProvider = new GithubAuthProvider()
+  githubProvider.addScope('user:email')
   githubProvider.setCustomParameters({
     prompt: 'select_account'
   })
@@ -287,6 +290,14 @@ export const useFirebaseAuthStore = defineStore('firebaseAuth', () => {
     await updatePassword(currentUser.value, newPassword)
   }
 
+  /** Delete the current user account */
+  const _deleteAccount = async (): Promise<void> => {
+    if (!currentUser.value) {
+      throw new FirebaseAuthStoreError(t('toastMessages.userNotAuthenticated'))
+    }
+    await deleteUser(currentUser.value)
+  }
+
   const addCredits = async (
     requestBodyContent: CreditPurchasePayload
   ): Promise<CreditPurchaseResponse> => {
@@ -385,6 +396,7 @@ export const useFirebaseAuthStore = defineStore('firebaseAuth', () => {
     accessBillingPortal,
     sendPasswordReset,
     updatePassword: _updatePassword,
+    deleteAccount: _deleteAccount,
     getAuthHeader
   }
 })

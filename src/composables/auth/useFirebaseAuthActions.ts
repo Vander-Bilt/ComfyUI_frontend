@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 import { useErrorHandling } from '@/composables/useErrorHandling'
 import { t } from '@/i18n'
+import { useToastStore } from '@/platform/updates/common/toastStore'
 import { useFirebaseAuthStore } from '@/stores/firebaseAuthStore'
-import { useToastStore } from '@/stores/toastStore'
 import { usdToMicros } from '@/utils/formatUtil'
 
 /**
@@ -135,6 +135,16 @@ export const useFirebaseAuthActions = () => {
     reportError
   )
 
+  const deleteAccount = wrapWithErrorHandlingAsync(async () => {
+    await authStore.deleteAccount()
+    toastStore.add({
+      severity: 'success',
+      summary: t('auth.deleteAccount.success'),
+      detail: t('auth.deleteAccount.successDetail'),
+      life: 5000
+    })
+  }, reportError)
+
   return {
     logout,
     sendPasswordReset,
@@ -146,6 +156,7 @@ export const useFirebaseAuthActions = () => {
     signInWithEmail,
     signUpWithEmail,
     updatePassword,
+    deleteAccount,
     accessError
   }
 }

@@ -10,12 +10,12 @@ import type {
   IBaseWidget,
   IStringWidget
 } from '@/lib/litegraph/src/types/widgets'
+import { useToastStore } from '@/platform/updates/common/toastStore'
 import type { ResultItemType } from '@/schemas/apiSchema'
 import type { ComfyNodeDef } from '@/schemas/nodeDefSchema'
 import type { DOMWidget } from '@/scripts/domWidget'
 import { useAudioService } from '@/services/audioService'
-import { useToastStore } from '@/stores/toastStore'
-import { NodeLocatorId } from '@/types'
+import { type NodeLocatorId } from '@/types'
 import { getNodeByLocatorId } from '@/utils/graphTraversalUtil'
 
 import { api } from '../../scripts/api'
@@ -241,7 +241,7 @@ app.registerExtension({
           inputName,
           '',
           openFileSelection,
-          { serialize: false }
+          { serialize: false, canvasOnly: true }
         )
         uploadWidget.label = t('g.choose_file_to_upload')
 
@@ -398,7 +398,7 @@ app.registerExtension({
               mediaRecorder.stop()
             }
           },
-          { serialize: false }
+          { serialize: false, canvasOnly: true }
         )
 
         recordWidget.label = t('g.startRecording')

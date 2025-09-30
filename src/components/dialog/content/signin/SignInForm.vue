@@ -71,7 +71,8 @@
 </template>
 
 <script setup lang="ts">
-import { Form, FormSubmitEvent } from '@primevue/forms'
+import type { FormSubmitEvent } from '@primevue/forms'
+import { Form } from '@primevue/forms'
 import { zodResolver } from '@primevue/forms/resolvers/zod'
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
@@ -123,6 +124,8 @@ const handleForgotPassword = async (
 </script>
 
 <style scoped>
+@reference '../../../../assets/css/style.css';
+
 .text-link-disabled {
   @apply opacity-50 cursor-not-allowed;
 }

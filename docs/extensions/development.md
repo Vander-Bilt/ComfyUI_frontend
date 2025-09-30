@@ -105,12 +105,12 @@ The alternative would have been breaking all existing extensions or staying with
 
 Build the frontend for full functionality:
 ```bash
-npm run build
+pnpm build
 ```
 
 For faster iteration during development, use watch mode:
 ```bash
-npx vite build --watch
+pnpm exec vite build --watch
 ```
 
 Note: Watch mode provides faster rebuilds than full builds, but still no hot reload
